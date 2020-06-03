@@ -1,0 +1,50 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+<br>
+
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1> Welcome to 'the Gamer' </h1>
+			<h2>A selection of the best games available</h2>
+			<p>
+				<a class="btn btn-primary" href="/games/new">Add new game</a>
+			</p>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-lg-10">
+			<h3>Most Popular Games</h3>
+		</div>
+	</div>
+
+	<section id="gallery">
+		<div class="container">
+			<div class="row">
+				<% games.forEach(function(game){ %>
+				<div class="col-md-6 col-lg-4 mb-3">
+					<div class="card">
+						<a href="/games/<%= game._id %>">
+						<img src="<%= game.image %>" class="card-img-top" alt="<%= game.name %>">
+						</a>
+						<div class="card-body">
+							<h5 class="card-title"><%= game.name %></h5>
+							<p class="card-text"><%= game.description %></p>
+<!-- READ MORE -->
+							<a href="/games/<%= game._id %>" class="btn btn-outline-success btn-sm">Read more</a>
+<!-- heart -->
+							<a href="/" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i> </a>
+<!-- edit -->
+							<a href="/games/<%= game._id %>/edit" class="btn btn-outline-primary btn-sm float-right editMe"><i class="far fa-edit mr-2"></i> </a>
+<!-- delete -->
+							<a href="/games/<%= game._id %>/edit" class="btn btn-outline-primary btn-sm float-right editMe"><i class="far fa-trash-alt"></i> </a>
+						</div>
+					</div>
+				</div>
+				<% }); %>
+			</div>
+		</div>
+	</section>
+</div>
+
+<%- include("partials/footer") %>

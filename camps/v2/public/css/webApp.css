@@ -1,0 +1,164 @@
+/*
+  _____                  _        _____  _____ _____ 
+ |  __ \                ( )      / ____|/ ____/ ____|
+ | |__) |___  _ __ _   _|/ ___  | |    | (___| (___  
+ |  _  // _ \| '__| | | | / __| | |     \___ \\___ \ 
+ | | \ \ (_) | |  | |_| | \__ \ | |____ ____) |___) |
+ |_|  \_\___/|_|   \__, | |___/  \_____|_____/_____/ 
+                    __/ |                            
+                   |___/                             
+
+*/
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    /* from UI Gradients */
+/*     background: #8360c3;  /* fallback for old browsers */
+/* background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+/* background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: rgb(222,222,230);
+background: linear-gradient(90deg, rgba(222,222,230,1) 0%, rgba(180,180,201,1) 77%);
+
+}
+
+
+.jumbotron {
+    color: #2c3e50;
+/*    background: #ecf0f1; */
+    background: #2c3e50;
+
+}
+
+@media (max-width: 767px) {
+    .jumbotron {
+      height: 200px;
+    }
+    .jumbotron .container h1 {
+      font-size: 16px;
+    }
+    .jumbotron .container p {
+      font-size: 12px;
+    }
+  }
+
+
+
+.content {
+    text-align: center;
+    color: antiquewhite;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                        0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.navbar-inverse {
+    background: #2c3e50;
+}
+
+.page1Icons {
+    margin-right: 0.1em;
+    font-size: 1.2em;
+    color: yellowgreen;
+}
+
+.page1Icons:hover {
+    color:red;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: antiquewhite;
+}
+
+.navbar-inverse .navbar-brand {
+    color: yellowgreen;
+}
+
+.brandText {
+    font-size: 1.2em;
+    color: yellowgreen;
+}
+
+h1 {
+    color: steelblue;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    color: steelblue;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 5;
+}
+
+.iconbar {
+    color: greenyellow;
+    font-size: 1.4em;
+}
+
+.fa-terminal {
+    color: greenyellow;
+}
+
+.btn-success{
+    background: greenyellow;
+    color: steelblue;
+
+}
+#jumbo {
+    text-align: center;
+    color: antiquewhite;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: red;
+}
+
+
+
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 30px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.thumbnail img {
+    object-fit: scale-down;
+    height: 400px !important;
+    width: 100%;
+}
+
+.carousel-item img {
+    object-fit: contain;
+    height: 500px !important;
+    width: 100%;
+}
+
+.deleteButtons {
+	display: inline;
+	float: left;
+	margin-right: 5px;
+}
+
+
+

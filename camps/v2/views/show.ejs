@@ -1,0 +1,34 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+<br>
+
+<h1>
+	This is the 'SHOW' template
+</h1>
+<div class="container">
+	
+<p>
+	<%=game.name %>
+</p>
+	<p>
+		<img src = "<%= game.image %>">
+	</p>
+	<p>
+		<% if (game.description !=null) { %>
+			<%= game.description %>
+		<% } %>		
+	</p>
+		<p>
+		<% if (game.story !=null) { %>
+			<%= game.story %>
+		<% } %>		
+	</p>
+ <div class=container> 
+    <a type="button" class="btn btn-primary deleteButtons" href="/games/<%= game._id %>/edit">Edit</a>
+	<form action="/games/<%= game._id %>?_method=DELETE" method="POST"> <button class="btn btn-danger deleteButtons">Delete</button></form>
+	<a type="button" class="btn btn-success deleteButtons" href="/games">Go Back</a>
+</div>
+
+</div>
+
+<%- include("partials/footer") %>
