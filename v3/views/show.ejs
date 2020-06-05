@@ -1,0 +1,61 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="container-fluid col-lg-12 text-center">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="content jumbotron">
+                        <h1>More detail on <%=game.name %> </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <!-- put inside a flex box so it scales as the screen resizes -->
+
+            <p class="container"> <img class="show_single_image" style="max-width:100%;height:auto;"
+                    src="<%= game.image %>"> 
+			<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button class="btn btn-sm-outline-success" type="button">Edit</button>
+    <button class="btn btn-sm-outline-danger" type="button">Delete</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Create</button>
+  </form>
+</nav>
+		</p>
+		</div>
+            <p>
+                <% if (game.description !=null) { %>
+                <%= game.description %>
+                <% } %>
+            </p>
+            <p>
+                <% if (game.story !=null) { %>
+                <%= game.story %>
+                <% } %>
+            </p>
+            <% if (game.price !=null) { %>
+            <%= game.price %>
+            <% } %>
+            </p>
+            <% if (game.owner !=null) { %>
+            <%= game.owner %>
+            <% } %>
+            </p>
+            <div class=container>
+                <a type="button" class="btn btn-primary deleteButtons" href="/games/<%= game._id %>/edit">Edit</a>
+                <form action="/games/<%= game._id %>?_method=DELETE" method="POST"> <button
+                        class="btn btn-danger deleteButtons ">Delete</button></form>
+                <a type="button" class="btn btn-success deleteButtons" href="/games">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <%- include("partials/footer") %>
